@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Irene cumple 30</title>
+    <link rel="stylesheet" href="main.css" />
+    <script src="main.js"></script>
+  </head>
+
+  <body>
+    <div id="intro-content">
+      <img
+        id="cartel-img"
+        onclick="start()"
+        src="assets/cartel.png"
+        alt="img-cartel"
+      />
+      <div class="video-bg">
+        <video id="bg-video" muted loop playsinline preload="auto">
+          <source src="assets/intro.mp4" type="video/mp4" />
+        </video>
+      </div>
+
+      <img
+        id="invitation-img"
+        src="assets/invitation.jpg"
+        alt="img-invitation"
+      />
+    </div>
+
+    <div id="invitation-content">
+      <iframe
+        id="invitation-pdf"
+        src="assets/invitation.pdf"
+        frameborder="0"
+        loading="lazy"
+      ></iframe>
+    </div>
+
+    <audio id="bg-audio" preload="auto">
+      <source src="assets/song.mp3" type="audio/mp3" />
+    </audio>
+  </body>
+</html>
