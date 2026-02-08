@@ -1,10 +1,11 @@
 <!doctype html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Irene cumple 30</title>
+    <title>Irene 30 - Shrek</title>
     <link rel="stylesheet" href="main.css" />
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
     <script src="main.js"></script>
   </head>
 
@@ -16,7 +17,7 @@
         src="assets/cartel.png"
         alt="img-cartel"
       />
-      <div class="video-bg">
+      <div class="video-bg loading">
         <video id="bg-video" muted loop playsinline preload="auto">
           <source src="assets/intro.mp4" type="video/mp4" />
         </video>
@@ -24,18 +25,32 @@
 
       <img
         id="invitation-img"
-        src="assets/invitation.jpg"
+        src="assets/invitation-portada.png"
         alt="img-invitation"
       />
     </div>
 
-    <div id="invitation-content">
-      <iframe
-        id="invitation-pdf"
-        src="assets/invitation.pdf"
-        frameborder="0"
-        loading="lazy"
-      ></iframe>
+    <div id="invitation-div">
+      <img src="assets/invitation-portada.png" />
+      <img src="assets/invitation-content.png" />
+
+      <div id="characters-div">
+        <hr />
+        <h3>Elige tu personaje de Shrek</h3>
+        <div id="characters-selection"></div>
+      </div>
+    </div>
+    
+    <div id="modal-overlay" class="modal-overlay hidden">
+      <div class="modal">
+        <h2 id="modal-title"></h2>
+        <p id="modal-subtitle"></p>
+
+        <div class="modal-actions">
+          <button class="modal-btn cancel" id="modal-cancel" onclick="closeModal(false)">Cancelar</button>
+          <button class="modal-btn accept" id="modal-accept" onclick="closeModal(true)">Aceptar</button>
+        </div>
+      </div>
     </div>
 
     <audio id="bg-audio" preload="auto">
