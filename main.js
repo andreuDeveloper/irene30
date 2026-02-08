@@ -60,7 +60,7 @@ const CHARACTERS = [
   { name: "Rumpelstiltskin", img: "Rumpelstiltskin (1).webp" },
   { name: "Merlin", img: "merlin.webp" },
   { name: "Capitan Garfio", img: "capitangarfio.webp" },
-  { name: "Doris", img: "doris.webp" },
+  { name: "Doris", img: "Doris.webp" },
   { name: "Jero el Pastelero", img: "JeroelPastelero.webp" },
   { name: "Blancanieves", img: "Blancanieves.webp" },
   { name: "Cenicienta", img: "Cenicienta.webp" },
